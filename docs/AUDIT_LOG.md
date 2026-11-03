@@ -2939,3 +2939,14 @@ adb install -r /Users/hardikverma/playground/erp-mobile/erp-mobile.apk
 Before pushing anything I'm checking the folder layout, what's already under git, and what the remote is.
 
 ---
+## 2026-11-03 17:27 — Request 108
+
+**User:**
+
+> push all code and document all changes in this; also add a rule: whenever something is updated or something new is changed, always have a date and the feature implementation mentioned with what changed; also write the entire conversation (what the user said and what the agent said) into a file and keep it as an audit log; also push the CLAUDE file so that whenever a new agent talks it has the full context of what changed and when it was changed — push the CLAUDE file or create a new repository on the command line (GitHub quick-setup for https://github.com/hardik-cb/ERP.git).
+
+**Agent:**
+
+Found the target repo `hardik-cb/ERP` is **public** and empty, `erp-mobile` already contained an Expo-template git repo, and no git identity was configured. Created one repository rooted at `~/playground` with an allow-list `.gitignore` (only `erp/`, `erp-mobile/`, `docs/`, `CLAUDE.md`, `README.md`), moved the template repo aside (`~/playground/erp-mobile-template-git-backup`), used the GitHub noreply address for commits, and pushed two commits to `main`: the code (95 files — no database, APK, keystore, `android/`, `ios/`, `node_modules`) and the docs. Wrote `CLAUDE.md` (rules: dated changelog entry for every change, append-only audit log, keep web and mobile in sync, never lose user data), `docs/ARCHITECTURE.md`, `docs/CHANGELOG.md` (reconstructed by date from the session) and this audit log generated from the transcript, with customer names/e-mails redacted because the repo is public. Warned that `android/app/debug.keystore` is deliberately not pushed and must be backed up separately, or tablet updates would require wiping its data.
+
+---
