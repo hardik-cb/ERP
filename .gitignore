@@ -1,0 +1,24 @@
+# This repository lives in ~/playground, next to unrelated projects: ignore everything
+# except the ERP project files.
+/*
+!/.gitignore
+!/README.md
+!/CLAUDE.md
+!/docs/
+!/erp/
+!/erp-mobile/
+
+# Never commit data, builds or keys (anywhere)
+**/.claude/
+**/data/
+*.db
+*.db-shm
+*.db-wal
+*.apk
+*.aab
+*.keystore
+*.jks
+.env
+.env.*
+.DS_Store
+node_modules/
